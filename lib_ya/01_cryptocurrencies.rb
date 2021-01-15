@@ -8,18 +8,26 @@
  curr.zip(price) {|a, b| money [a] = b.to_f}
 
 def highest_value (money)
+  puts "la crypto ayant le plus de valeur"
+  answer = gets.chomp
     puts money.max_by {|a, b| b}
 end
 
 def lowest_value (money)
+  puts "La crypto qui a la plus petite valeur."
+  answer = gets.chomp
     puts money.min_by {|a, b| b}
 end
 
 def values_under (money)
+  puts"Les devises dont le cours est inférieur à 6000"
+  answer = gets.chomp
   puts money.select{|a, b| b < 6000}
 end
 
 def values_highest_under (money)
+  puts"La devise la plus chère parmi celles dont le cours est inférieur à 6000."
+  answer = gets.chomp
   puts (money.select{|k,v| v < 6000}).max_by{|a,b| b}
 end
 

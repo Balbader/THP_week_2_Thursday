@@ -10,7 +10,7 @@ puts accounts.count { |x| x.length == 6 }
 #Combien commencent par une majuscule (première lettre juste après le @) ?
 puts accounts.grep(/^@[A-Z]/).count
 #Trie la liste de handle par ordre alphabétique.
-accounts.sort
+accounts.sort(&:casecmp)
 #Trie la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)
  accounts.sort_by{|x| x.length}
 #Quelle est la position dans l'array de la personne @epenser ?
