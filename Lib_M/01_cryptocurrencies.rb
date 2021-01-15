@@ -13,14 +13,14 @@ puts crypto.max_by {|a,b| b}
 end
 #La ou les crypto qui ont la plus petite valeur
 def minimal_value(crypto)
-print crypto.min_by {|a,b| b}
+puts crypto.min_by {|a,b| b}
 end
 #Les devises dont le cours est inférieur à 6000
 def under_6k(crypto)
-  crypto.select{|k,v| v < 6000}
+ puts crypto.select{|k,v| v < 6000}
 end
 #La devise la plus chère parmi celles dont le cours est inférieur à 6000
-def highest_under_6k
+def highest_under_6k(crypto)
 puts (crypto.select{|k,v| v < 6000}).max_by{|a,b| b}
 end
 
@@ -28,6 +28,7 @@ def perform(crypto)
 highest_value(crypto)
 minimal_value(crypto)
 under_6k(crypto)
+highest_under_6k(crypto)
 end
 
 perform(crypto)
